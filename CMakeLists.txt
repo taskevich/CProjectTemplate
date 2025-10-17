@@ -55,7 +55,7 @@ if(PLATFORM_DIR STREQUAL "windows")
     else()
         target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
     endif()
-    target_link_libraries(${PROJECT_NAME} PRIVATE ws2_32) # если нужно
+    target_link_libraries(${PROJECT_NAME} PRIVATE ws2_32)
 elseif(PLATFORM_DIR STREQUAL "unix")
     target_compile_definitions(${PROJECT_NAME} PRIVATE "OS_UNIX")
     target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
